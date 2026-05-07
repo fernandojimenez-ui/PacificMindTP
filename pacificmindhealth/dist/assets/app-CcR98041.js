@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){const e=document.getElementById("mobile-menu"),n=document.getElementById("primary-menu-toggle");e&&n&&n.addEventListener("click",function(t){t.preventDefault(),e.classList.toggle("hidden")})});

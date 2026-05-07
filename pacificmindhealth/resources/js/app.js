@@ -1,11 +1,12 @@
 window.addEventListener('load', function () {
-    let mainNavigation = document.getElementById('primary-navigation')
-    let mainNavigationToggle = document.getElementById('primary-menu-toggle')
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileToggle = document.getElementById('primary-menu-toggle');
 
-    if(mainNavigation && mainNavigationToggle) {
-        mainNavigationToggle.addEventListener('click', function (e) {
-            e.preventDefault()
-            mainNavigation.classList.toggle('hidden')
-        })
+    if (mobileMenu && mobileToggle) {
+        mobileToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            mobileMenu.classList.toggle('hidden');
+        });
     }
 })

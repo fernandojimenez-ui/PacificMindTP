@@ -1,3 +1,95 @@
+/* ── Header logo ── */
+#site-header .site-logo img,
+#site-header a > img {
+    height: 72px !important;
+    width: auto !important;
+    max-width: 180px !important;
+    object-fit: contain !important;
+}
+
+/* ── Primary navigation ── */
+.pmh-nav > li {
+    position: relative;
+}
+
+.pmh-nav > li > a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a4a5a;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.pmh-nav > li > a:hover,
+.pmh-nav > li.current-menu-item > a,
+.pmh-nav > li.current-menu-ancestor > a {
+    color: #3395ac;
+}
+
+/* Dropdown arrow */
+.pmh-nav > li.menu-item-has-children > a::after {
+    content: ' ▾';
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+/* Dropdown panel */
+.pmh-nav .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 0.5rem 0;
+    z-index: 100;
+}
+
+.pmh-nav li:hover > .sub-menu {
+    display: block;
+}
+
+.pmh-nav .sub-menu a {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    color: #1a4a5a;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.1s, color 0.1s;
+}
+
+.pmh-nav .sub-menu a:hover {
+    background: #f2f6f8;
+    color: #3395ac;
+}
+
+/* Mobile nav */
+#mobile-menu .menu-item > a {
+    display: block;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1a4a5a;
+    border-bottom: 1px solid #f2f6f8;
+    text-decoration: none;
+}
+
+#mobile-menu .sub-menu {
+    padding-left: 1rem;
+}
+
+#mobile-menu .sub-menu a {
+    font-size: 0.875rem;
+    color: #3395ac;
+}
+
+/* ── Entry content ── */
 .entry-content,
 .block-editor-block-list__layout {
   color: var(--color-zinc-950);
