@@ -1,0 +1,218 @@
+{
+    "key": "group_global_modules",
+    "title": "Global Modules",
+    "fields": [
+        {
+            "key": "field_gm_featured_in_tab",
+            "label": "Featured In",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_gm_fi_title",
+            "label": "Section Title",
+            "name": "gm_fi_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Leave blank to hide the heading",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Featured In",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_gm_fi_videos",
+            "label": "Videos",
+            "name": "gm_fi_videos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add YouTube or Vimeo videos. Paste the full watch URL (e.g. https:\/\/www.youtube.com\/watch?v=xxxxx).",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Video",
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_gm_fi_video_url",
+                    "label": "Video URL",
+                    "name": "gm_fi_video_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "YouTube or Vimeo watch URL",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_gm_fi_videos"
+                },
+                {
+                    "key": "field_gm_fi_video_label",
+                    "label": "Label (optional)",
+                    "name": "gm_fi_video_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Short title shown below the video thumbnail",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_gm_fi_videos"
+                }
+            ]
+        },
+        {
+            "key": "field_gm_fi_logos",
+            "label": "Logos",
+            "name": "gm_fi_logos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add publication or partner logos. Logos display in a responsive grid.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Logo",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_gm_fi_logo_img",
+                    "label": "Logo Image",
+                    "name": "gm_fi_logo_img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "15",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_gm_fi_logos"
+                },
+                {
+                    "key": "field_gm_fi_logo_alt",
+                    "label": "Alt Text (optional)",
+                    "name": "gm_fi_logo_alt",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Overrides the image alt text for screen readers",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_gm_fi_logos"
+                },
+                {
+                    "key": "field_gm_fi_logo_link",
+                    "label": "Link URL (optional)",
+                    "name": "gm_fi_logo_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Makes the logo clickable",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_gm_fi_logos"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "global-modules"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777579687
+}

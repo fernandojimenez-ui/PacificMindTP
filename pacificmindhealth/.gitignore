@@ -1,0 +1,7 @@
+/node_modules
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.DS_Store

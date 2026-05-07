@@ -1,0 +1,934 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+/* =================================================================
+   PMH ILWU Landing Page — template-lp-ilwu.css
+   Pacific Mind Health · ILWU Member LP
+   ================================================================= */
+
+/* -----------------------------------------------------------------
+   BASE RESET
+   ----------------------------------------------------------------- */
+.ilwu-lp *, .ilwu-lp *::before, .ilwu-lp *::after { box-sizing: border-box; }
+
+.ilwu-lp {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin-top: -90px !important;
+    padding-top: 0 !important;
+
+}
+
+.ilwu-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* -----------------------------------------------------------------
+   BUTTONS
+   ----------------------------------------------------------------- */
+.ilwu-btn {
+    display: inline-block;
+    padding: 13px 30px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.18s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+    text-shadow: none;
+}
+.ilwu-btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.30);
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+.ilwu-btn--primary       { background: #3395ac; color: #fff !important; border: none; }
+.ilwu-btn--outline       { background: transparent; color: #3395ac; border: 2px solid #3395ac; }
+.ilwu-btn--white         { background: rgba(255,255,255,0.18); color: #fff; border: 2px solid rgba(255,255,255,0.55); }
+.ilwu-btn--outline-white { background: transparent; color: #fff; border: 2px solid #fff; }
+
+/* -----------------------------------------------------------------
+   SHARED SECTION ELEMENTS
+   ----------------------------------------------------------------- */
+.ilwu-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3395ac;
+    text-align: center;
+    margin-bottom: 2em;
+    line-height: 1.2;
+}
+.ilwu-section-intro {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    line-height: 1.75;
+}
+.ilwu-wave { display: block; width: 100%; line-height: 0; }
+
+/* -----------------------------------------------------------------
+   SCROLL REVEAL ANIMATION
+   ----------------------------------------------------------------- */
+.ilwu-lp .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.ilwu-lp .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for grid children */
+.ilwu-why__grid       .reveal:nth-child(1) { transition-delay: 0.00s; }
+.ilwu-why__grid       .reveal:nth-child(2) { transition-delay: 0.08s; }
+.ilwu-why__grid       .reveal:nth-child(3) { transition-delay: 0.16s; }
+.ilwu-why__grid       .reveal:nth-child(4) { transition-delay: 0.10s; }
+.ilwu-why__grid       .reveal:nth-child(5) { transition-delay: 0.18s; }
+
+.ilwu-locations__grid  .reveal:nth-child(1) { transition-delay: 0.00s; }
+.ilwu-locations__grid  .reveal:nth-child(2) { transition-delay: 0.10s; }
+.ilwu-locations__grid  .reveal:nth-child(3) { transition-delay: 0.20s; }
+
+.ilwu-treatments__grid .reveal:nth-child(1) { transition-delay: 0.00s; }
+.ilwu-treatments__grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+.ilwu-treatments__grid .reveal:nth-child(3) { transition-delay: 0.20s; }
+
+.ilwu-challenges__grid .reveal:nth-child(1) { transition-delay: 0.00s; }
+.ilwu-challenges__grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+.ilwu-challenges__grid .reveal:nth-child(3) { transition-delay: 0.05s; }
+.ilwu-challenges__grid .reveal:nth-child(4) { transition-delay: 0.15s; }
+
+/* -----------------------------------------------------------------
+   SECTION 1: HERO
+   ----------------------------------------------------------------- */
+.ilwu-hero {
+    position: relative;
+    background: #1a4a5a;
+    padding: 160px 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.ilwu-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+.ilwu-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(163deg, rgba(51, 149, 172, 0.92) 38%, rgb(51 149 172 / 16%) 100%);
+    z-index: 1;
+}
+.ilwu-hero__content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 52px;
+    padding-left: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: auto;
+    margin-left: 0;
+}
+.ilwu-hero__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+    animation: ilwuHeroSlide 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.ilwu-hero__image {
+    position: relative;
+    z-index: 2;
+    animation: ilwuHeroFade 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+.ilwu-hero__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 20px 56px rgba(0,0,0,0.35);
+}
+.ilwu-hero__eyebrow {
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.ilwu-hero__headline {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.12;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+.ilwu-hero__headline-accent {
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.20);
+}
+.ilwu-hero__subheadline {
+    color: rgba(255,255,255,0.88);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+.ilwu-hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-start; }
+
+/* Hero-specific button overrides — mid teal primary for contrast against teal overlay */
+.ilwu-hero__ctas .ilwu-btn {
+    padding: 15px 52px;
+}
+.ilwu-hero__ctas .ilwu-btn--white {
+    background: #52bfcf;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    font-weight: 700;
+}
+.ilwu-hero__ctas .ilwu-btn--white:hover {
+    background: #3dafbf;
+    opacity: 1;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+.ilwu-hero__ctas .ilwu-btn--outline-white {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.70);
+    box-shadow: none;
+}
+.ilwu-hero__ctas .ilwu-btn--outline-white:hover {
+    background: rgba(255,255,255,0.10);
+    border-color: #fff;
+    opacity: 1;
+}
+
+.ilwu-hero__wave { position: relative; z-index: 5; top: 7px; }
+
+@keyframes ilwuHeroSlide {
+    from { opacity: 0; transform: translateX(-36px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ilwuHeroFade {
+    from { opacity: 0; transform: translateY(24px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* -----------------------------------------------------------------
+   SECTION 2: TRUST TAGLINE BAR
+   ----------------------------------------------------------------- */
+/* (Intro section styles live after tagline bar — see Section 2b below) */
+.ilwu-tagline-bar {
+    background: #fff;
+    padding: 26px 0;
+    z-index: 999;
+    position: relative;
+    top: -1px;
+}
+.ilwu-tagline-bar__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+.ilwu-tagline-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3395ac;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 28px;
+}
+.ilwu-tagline-bar__item:last-child { border-right: none; }
+.ilwu-tagline-bar__icon {
+    font-size: 14px;
+    color: #52bfcf;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 2b: INTRO / ABOUT
+   ----------------------------------------------------------------- */
+.ilwu-intro {
+    background: #fff;
+    padding: 72px 0;
+}
+.ilwu-intro__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+}
+.ilwu-intro__body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+.ilwu-intro__body p { margin-bottom: 14px; }
+.ilwu-intro__body p:last-child { margin-bottom: 0; }
+.ilwu-intro__body a { color: #3395ac; }
+.ilwu-intro__cta { display: inline-block; margin-top: 28px; }
+.ilwu-intro__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+/* -----------------------------------------------------------------
+   SECTION 3: INSURANCE
+   ----------------------------------------------------------------- */
+.ilwu-insurance {
+    background: #f6ece0;
+    padding: 64px 0;
+}
+.ilwu-insurance__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ilwu-insurance__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #dbcbb4;
+    border-radius: 12px;
+    padding: 12px 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    min-width: 120px;
+    height: 64px;
+}
+.ilwu-insurance__logo:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+.ilwu-insurance__coming-soon {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3395ac;
+    letter-spacing: 0.3px;
+}
+
+.ilwu-insurance__logo img {
+    max-height: 36px;
+    max-width: 110px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 4: WHY ILWU FAMILIES CHOOSE PMH
+   ----------------------------------------------------------------- */
+.ilwu-why {
+    background: #fff;
+    padding: 88px 0 80px;
+}
+
+/* 3-column first row, 2-column second row centered */
+.ilwu-why__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    margin-top: 12px;
+}
+.ilwu-why-card {
+    grid-column: span 2;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #f4f8fa;
+    border-radius: 14px;
+    padding: 26px 22px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.ilwu-why-card:hover {
+    box-shadow: 0 10px 30px rgba(51,149,172,0.14);
+    transform: translateY(-3px);
+}
+.ilwu-why-card:nth-child(1) { border-top-color: #3395ac; }
+.ilwu-why-card:nth-child(2) { border-top-color: #52bfcf; }
+.ilwu-why-card:nth-child(3) { border-top-color: #83d0db; }
+/* Cards 4 & 5: span 3 cols each, centers the 2-card second row */
+.ilwu-why-card:nth-child(4),
+.ilwu-why-card:nth-child(5) { grid-column: span 3; border-top-color: #3395ac; }
+.ilwu-why-card:nth-child(5) { border-top-color: #52bfcf; }
+
+.ilwu-why-card__icon-wrap {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3395ac;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    margin-top: 2px;
+}
+.ilwu-why-card .ilwu-why-card__icon-wrap {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 6px;
+}
+.ilwu-why-card__icon-wrap svg { width: 100%; height: 100%; }
+.ilwu-why-card__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a4a5a;
+    margin-bottom: 7px;
+    line-height: 1.3;
+}
+.ilwu-why-card__body {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #555;
+    margin: 0;
+}
+
+/* Coverage callout */
+.ilwu-coverage-note {
+    margin-top: 36px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #f6ece0;
+    border-radius: 12px;
+    padding: 22px 28px;
+}
+.ilwu-coverage-note__icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    color: #3395ac;
+    margin-top: 2px;
+}
+.ilwu-coverage-note p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #444;
+    margin: 0;
+}
+.ilwu-coverage-note strong { color: #1a4a5a; }
+
+/* -----------------------------------------------------------------
+   SECTION 5: CONDITIONS / TREATMENT OPTIONS (teal background)
+   ----------------------------------------------------------------- */
+.ilwu-conditions {
+    background: #3395ac;
+    position: relative;
+    overflow: hidden;
+}
+.ilwu-conditions__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ilwu-conditions__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(51,149,172,0.88);
+    z-index: 1;
+}
+.ilwu-wave--into-teal,
+.ilwu-wave--out-of-teal { position: relative; z-index: 2; }
+
+.ilwu-conditions__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 52px;
+    align-items: center;
+    padding-top: 56px;
+    padding-bottom: 64px;
+    position: relative;
+    z-index: 3;
+}
+.ilwu-conditions__content { text-align: center; }
+.ilwu-conditions__image img {
+    width: 400px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.30);
+}
+.ilwu-conditions__headline {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+.ilwu-conditions__intro {
+    color: rgba(255,255,255,0.82);
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 40px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ilwu-conditions__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0 0 36px;
+    padding: 0;
+}
+.ilwu-conditions__tag {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(131,208,219,0.38);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    cursor: default;
+}
+.ilwu-conditions__tag:hover {
+    background: rgba(255,255,255,0.22);
+    border-color: rgba(255,255,255,0.60);
+    transform: translateY(-2px);
+}
+.ilwu-conditions__tag a {
+    color: #fff;
+    text-decoration: none;
+}
+.ilwu-conditions__tag a:hover { color: #fff; text-decoration: none; }
+.ilwu-conditions__online {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.78);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+.ilwu-conditions__online svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 6: LOCATIONS + TREATMENTS
+   ----------------------------------------------------------------- */
+.ilwu-locations {
+    background: #fff;
+    padding: 88px 0 80px;
+}
+
+/* Location Cards */
+.ilwu-locations__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+}
+.ilwu-location-card {
+    border: 1px solid #e4e8ec;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.ilwu-location-card:hover {
+    box-shadow: 0 14px 40px rgba(51,149,172,0.14);
+    transform: translateY(-4px);
+}
+.ilwu-location-card__map {
+    width: 100%;
+    height: 190px;
+    border: none;
+    display: block;
+    flex-shrink: 0;
+}
+.ilwu-location-card__info {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.ilwu-location-card__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3395ac;
+    margin-bottom: 10px;
+}
+.ilwu-location-card__name svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #3395ac;
+}
+.ilwu-location-card__address {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+.ilwu-location-card__hours {
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+.ilwu-location-card__hours-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+}
+.ilwu-location-card__hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+    padding: 4px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.ilwu-location-card__hours-row span:last-child {
+    font-weight: 600;
+    color: #333;
+}
+.ilwu-location-card__directions {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #3395ac;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s ease;
+    margin-top: auto;
+}
+.ilwu-location-card__directions:hover {
+    background: #1a4a5a;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* Treatment Cards */
+.ilwu-treatments__header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.ilwu-treatments__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3395ac;
+    margin-bottom: 8px;
+}
+.ilwu-treatments__heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3395ac;
+    margin: 0;
+}
+.ilwu-treatments__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+.ilwu-treatment-card {
+    border: 1px solid #e4e8ec;
+    border-radius: 14px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.ilwu-treatment-card:hover {
+    box-shadow: 0 10px 32px rgba(0,0,0,0.10);
+    transform: translateY(-4px);
+}
+.ilwu-treatment-card__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.ilwu-treatment-card__body {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.ilwu-treatment-card__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3395ac;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+.ilwu-treatment-card__desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #555;
+    margin: 0 0 18px;
+    flex: 1;
+}
+.ilwu-treatment-card__link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3395ac;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s ease;
+}
+.ilwu-treatment-card__link:hover { color: #1a4a5a; text-decoration: none; }
+
+.ilwu-locations__cta {
+    text-align: center;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 7: UNIQUE CHALLENGES
+   ----------------------------------------------------------------- */
+.ilwu-challenges {
+    background: #f2f6f8;
+    padding: 88px 0 80px;
+}
+.ilwu-challenges__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 12px;
+}
+.ilwu-challenges__bottom {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-top: 44px;
+}
+.ilwu-challenges__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+}
+.ilwu-challenge-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.ilwu-challenge-card:hover {
+    box-shadow: 0 10px 32px rgba(0,0,0,0.11);
+    transform: translateY(-3px);
+}
+.ilwu-challenge-card__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5f8, #d0eef4);
+    color: #3395ac;
+    border-radius: 12px;
+    padding: 11px;
+}
+.ilwu-challenge-card__icon svg { width: 100%; height: 100%; }
+.ilwu-challenge-card__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a4a5a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+.ilwu-challenge-card__body {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #555;
+    margin: 0;
+}
+.ilwu-challenges__note {
+    margin-top: 44px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ilwu-challenges__note p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    font-style: normal;
+    border-left: 4px solid #3395ac;
+    padding-left: 20px;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 8: TESTIMONIALS
+   ----------------------------------------------------------------- */
+.ilwu-testimonials {
+    background: #f6ece0;
+    padding: 80px 0;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 9: CTA BANNER
+   ----------------------------------------------------------------- */
+.ilwu-cta-banner {
+    background: #3395ac;
+    position: relative;
+}
+.ilwu-cta-banner__content {
+    text-align: center;
+    padding: 80px 32px;
+}
+.ilwu-cta-banner__headline {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+.ilwu-cta-banner__subtext {
+    margin-bottom: 40px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ilwu-cta-banner__subtext p {
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.75;
+    margin: 0;
+}
+.ilwu-cta-banner__subtext strong { color: #83d0db; }
+.ilwu-cta-banner__buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* -----------------------------------------------------------------
+   SECTION 10: DISCLAIMER
+   ----------------------------------------------------------------- */
+.ilwu-disclaimer {
+    background: #fff;
+    padding: 24px 0;
+    border-top: 1px solid #e8e8e8;
+}
+.ilwu-disclaimer__text {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* -----------------------------------------------------------------
+   RESPONSIVE — 900px
+   ----------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .ilwu-hero__headline         { font-size: 34px; }
+    .ilwu-hero__content          { padding-left: 32px; }
+    .ilwu-hero__bg               { background-attachment: scroll; background-position: center top; }
+
+    .ilwu-intro__inner           { grid-template-columns: 1fr; }
+    .ilwu-intro__image           { display: none; }
+
+    .ilwu-why__grid              { grid-template-columns: 1fr; }
+    .ilwu-why-card,
+    .ilwu-why-card:nth-child(4),
+    .ilwu-why-card:nth-child(5)  { grid-column: span 1; }
+
+    .ilwu-conditions__inner      { grid-template-columns: 1fr; }
+    .ilwu-conditions__image      { display: none; }
+    .ilwu-conditions__bg         { background-attachment: scroll; }
+
+    .ilwu-locations__grid        { grid-template-columns: 1fr; }
+    .ilwu-treatments__grid       { grid-template-columns: 1fr; }
+    .ilwu-challenges__bottom     { grid-template-columns: 1fr; }
+    .ilwu-challenges__grid       { grid-template-columns: 1fr; }
+}
+
+/* -----------------------------------------------------------------
+   RESPONSIVE — 600px
+   ----------------------------------------------------------------- */
+@media (max-width: 600px) {
+    .ilwu-container               { padding: 0 20px; }
+    .ilwu-hero                    { padding-top: 120px; min-height: 520px; }
+    .ilwu-hero__bg                { background-attachment: scroll; background-position: right; }
+    .ilwu-hero__headline          { font-size: 28px; }
+    .ilwu-hero__ctas              { flex-direction: column; }
+    .ilwu-section-title           { font-size: 24px; }
+    .ilwu-tagline-bar__list       { flex-direction: column; align-items: center; gap: 12px; }
+    .ilwu-tagline-bar__item       { border-right: none; }
+    .ilwu-cta-banner__headline    { font-size: 26px; }
+    .ilwu-cta-banner__buttons     { flex-direction: column; align-items: center; }
+    .ilwu-challenge-card          { flex-direction: column; gap: 14px; }
+    .ilwu-coverage-note           { flex-direction: column; gap: 12px; }
+}
+
+section.ilwu-treatments {
+    padding: 6em 0px;
+}

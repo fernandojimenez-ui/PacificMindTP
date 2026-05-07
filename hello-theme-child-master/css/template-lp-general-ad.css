@@ -1,0 +1,140 @@
+/* =================================================================
+   PMH General Ad Landing Page — template-lp-general-ad.css
+   Extends template-lp-ilwu.css; only GA-specific additions here.
+   ================================================================= */
+
+.gad-lp,
+.gad-lp *,
+.gad-lp h1,
+.gad-lp h2,
+.gad-lp h3,
+.gad-lp h4,
+.gad-lp p,
+.gad-lp a,
+.gad-lp li {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* -----------------------------------------------------------------
+   HERO — tagline h2
+   ----------------------------------------------------------------- */
+.gad-lp .ilwu-hero {
+    min-height: 600px;
+}
+
+.gad-lp .ilwu-hero__content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: auto;
+    padding-left: 13em;
+    left: 0;
+}
+
+.gad-lp .ilwu-hero__headline {
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gad-lp .ilwu-hero__text h2 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+    margin-top: -6px;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+/* -----------------------------------------------------------------
+   HERO — body paragraph
+   ----------------------------------------------------------------- */
+.gad-lp .gad-hero__body {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+/* -----------------------------------------------------------------
+   OFFERINGS — intro text below heading
+   ----------------------------------------------------------------- */
+.gad-treatments__intro {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    max-width: 620px;
+    margin: 12px auto 0;
+    line-height: 1.75;
+}
+
+/* -----------------------------------------------------------------
+   SUB-LIST — TMS options / Spravato bullets inside treatment cards
+   ----------------------------------------------------------------- */
+.gad-sub-list {
+    list-style: none;
+    margin: 14px 0 18px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+}
+.gad-sub-list li {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #555;
+    padding-left: 16px;
+    position: relative;
+}
+.gad-sub-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3395ac;
+}
+
+/* -----------------------------------------------------------------
+   CONDITIONS — inner container vertical padding + centering
+   ----------------------------------------------------------------- */
+.gad-lp .gad-conditions__inner {
+    position: relative;
+    z-index: 3;
+    padding-top: 56px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+
+/* -----------------------------------------------------------------
+   WHY SECTION — override to 3 equal columns for 3-card layout
+   ----------------------------------------------------------------- */
+.gad-lp .ilwu-why__grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+.gad-lp .ilwu-why-card,
+.gad-lp .ilwu-why-card:nth-child(4),
+.gad-lp .ilwu-why-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* -----------------------------------------------------------------
+   RESPONSIVE
+   ----------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .gad-lp .ilwu-hero__content { padding-left: 32px; }
+    .gad-lp .ilwu-why__grid { grid-template-columns: 1fr; }
+}

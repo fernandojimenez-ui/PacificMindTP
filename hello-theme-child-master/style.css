@@ -1,0 +1,166 @@
+/* 
+Theme Name: Beyondpress Child Theme - Modern Medical 
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Beyond Marketing Child Theme
+Author: Beyondpress
+Author URI: https://beyondmarketing.net/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+a{
+	color: #52BFCF
+}
+#headerscs .elementor-widget-theme-site-logo img {
+    filter: grayscale(1030%);
+    filter: brightness(0) invert(1);
+}
+
+.elementor-641 .elementor-element.elementor-element-7b075af.elementor-sticky--effects .nav-menu a {
+    color: var( --e-global-color-primary ) !important;
+    background: #ffffff;
+}
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -14px;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 1;
+}
+
+#manageslider .elementor-testimonial__image img {
+    width: 360px;
+    height: 410px;
+	border-radius:15px;
+}
+
+
+
+#manageslider .elementor-testimonial__content {
+    background: #fff;
+    margin-top: -40px;
+    padding: 20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+	height:100%;
+		transition: ease-in-out 1s;
+}
+
+#manageslider .swiper-slide {
+    padding: 0px !important;
+    overflow: hidden;
+    height: 500px;
+}
+
+
+
+p.scrollpras {
+    font-size: 14px;
+    color: #0B4CA9;
+    padding-top: 20px;
+}
+
+
+#manageslider .swiper-slide {
+    padding: 0px !important;
+
+}
+
+#manageslider .swiper-slide:hover .elementor-testimonial__content {
+    margin-top: -61px; }
+
+/*#manageslider .swiper-slide:hover .elementor-testimonial__content {
+    margin-top: -231px; }*/
+
+
+#manageslider .elementor-testimonial__text {
+    font-size: 1.3em;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+#manageslider .elementor-testimonial__text h3 {
+    color: #0B4CA9;
+    font-size: 24px;
+    margin-top: 0px;
+}
+
+#manageslider .elementor-testimonial__text h4 {
+    color: #0B4CA9;
+    font-size: 16px;
+    margin-top: -17px;
+}
+
+
+
+/* Service Container gap */
+
+.service-container .elementor-container{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.service-container .ele-col{
+
+    width: 31% !important;
+}
+
+	/* Service Container hover effect */
+
+.ele-col .elementor-widget-wrap::before {
+    content:"";
+    position: absolute;
+    bottom:0px;
+    left: 0px;
+    background-color: var( --e-global-color-primary );
+    width: 100%;
+    height: 0%;
+    transition: height 0.15s ease-in;
+    border-radius: 10px;
+}
+
+.ele-col .box-divider, selector .box-title h2, selector .box-des p{
+    transition: all 0.1s ease-in;
+}
+
+.ele-col .elementor-widget-wrap:hover::before{
+    height: 100% !important;
+}
+
+.ele-col:hover .box-des p, .ele-col:hover .box-title h2{
+    color: white !important;
+}
+
+
+.ele-col:hover .box-divider .elementor-divider-separator{
+    border-top: 1px solid white;
+}
+
+.page-id-15 #footercta{display:none !important;}
+
+.page-id-1132 #footercta{display:none !important;}
+
+
+
+
+	
+	/* Service Container mobile width */
+	.service-container .ele-col{
+
+    width: 100% !important;
+}
+
+}

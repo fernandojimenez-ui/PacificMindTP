@@ -1,0 +1,1665 @@
+{
+    "key": "group_flp_sections",
+    "title": "Flexible Landing Page — Sections",
+    "fields": [
+        {
+            "key": "field_flp_sections",
+            "label": "Page Sections",
+            "name": "flexible_landing_page_sections",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Add, remove, and reorder sections to build the page.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Section",
+            "layouts": [
+                {
+                    "key": "layout_flp_hero",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_hero_bg_image",
+                            "label": "Background Image",
+                            "name": "flp_hero_bg_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "22",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 1,
+                            "preview_size": "thumbnail"
+                        },
+                        {
+                            "key": "field_flp_hero_headline",
+                            "label": "Headline (H1)",
+                            "name": "flp_hero_headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "A Modern Approach to Mental Health",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_hero_subheadline",
+                            "label": "Subheadline (H2)",
+                            "name": "flp_hero_subheadline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional tagline shown below the main headline",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Feel better. Live better.",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_hero_body",
+                            "label": "Body Text",
+                            "name": "flp_hero_body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional paragraph shown below the headline",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "Your journey is unique, and your treatment should be, too. At Pacific Mind Health, we combine science with compassion to offer traditional and innovative evidence-based care. Whether you are seeking relief from treatment-resistant symptoms or managing complex conditions, our team is here to guide you.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_hero_ctas",
+                            "label": "CTA Buttons",
+                            "name": "flp_hero_ctas",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 3,
+                            "layout": "table",
+                            "button_label": "Add Button",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_hero_cta_label",
+                                    "label": "Label",
+                                    "name": "flp_hero_cta_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Get Started",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_hero_ctas"
+                                },
+                                {
+                                    "key": "field_flp_hero_cta_url",
+                                    "label": "URL",
+                                    "name": "flp_hero_cta_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "https:\/\/pacificmindhealth.com\/new-patient\/?hsLang=en",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_hero_ctas"
+                                },
+                                {
+                                    "key": "field_flp_hero_cta_style",
+                                    "label": "Style",
+                                    "name": "flp_hero_cta_style",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White",
+                                        "outline-white": "Outline White",
+                                        "primary": "Primary (Teal)"
+                                    },
+                                    "default_value": "white",
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "multiple": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "return_format": "value",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "parent_repeater": "field_flp_hero_ctas"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_intro",
+                    "name": "intro",
+                    "label": "Intro \/ About",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_intro_title",
+                            "label": "Section Title",
+                            "name": "flp_intro_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Care That Works as Hard as You Do",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_intro_image",
+                            "label": "Image",
+                            "name": "flp_intro_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_flp_intro_body",
+                            "label": "Body Text",
+                            "name": "flp_intro_body",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "default_value": "<p>Pacific Mind Health provides outpatient mental health care for patients and their families across California. Our goal is to help you access the support you need as quickly as possible, with care that fits your life, your schedule, and your needs.<\/p><p>Take the next step. Call <a href=\"tel:3105715041\">310-571-5041<\/a> or email <a href=\"mailto:contact@pacificmindhealth.com\">contact@pacificmindhealth.com<\/a>.<\/p>",
+                            "tabs": "all",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_flp_intro_cta_label",
+                            "label": "CTA Button Label",
+                            "name": "flp_intro_cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Schedule Now",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_intro_cta_url",
+                            "label": "CTA Button URL",
+                            "name": "flp_intro_cta_url",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/pacificmindhealth.com\/new-patient\/?hsLang=en",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_insurance",
+                    "name": "insurance",
+                    "label": "Insurance Logos",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_insurance_title",
+                            "label": "Section Title",
+                            "name": "flp_insurance_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Insurance We Accept",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_insurance_intro",
+                            "label": "Intro Text",
+                            "name": "flp_insurance_intro",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "default_value": "<p>We are in-network with most major insurance providers. Your benefits may cover the full cost of care — including copays, deductibles, and coinsurance — so you can access treatment with <strong>zero out-of-pocket costs<\/strong>.<\/p>",
+                            "tabs": "all",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_flp_insurance_logos",
+                            "label": "Insurance Logos",
+                            "name": "flp_insurance_logos",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 0,
+                            "layout": "grid",
+                            "button_label": "Add Logo",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_insurance_logo_img",
+                                    "label": "Logo",
+                                    "name": "flp_insurance_logo_img",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_flp_insurance_logos"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_flp_insurance_coming_soon",
+                            "label": "\"Coming Soon\" Note",
+                            "name": "flp_insurance_coming_soon",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional note shown below the logos. Example: Kaiser Permanente — Coming Soon!",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Kaiser Permanente — Coming Soon!",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_why_cards",
+                    "name": "why_cards",
+                    "label": "Feature Cards (Why Choose Us)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_why_title",
+                            "label": "Section Title",
+                            "name": "flp_why_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Modern Psychiatry. Human Connection.",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_why_intro",
+                            "label": "Intro Text",
+                            "name": "flp_why_intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "We combine science with compassion to offer traditional and innovative evidence-based care tailored to every patient.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_why_cards",
+                            "label": "Cards",
+                            "name": "flp_why_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Card",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_why_card_icon",
+                                    "label": "Icon Image",
+                                    "name": "flp_why_card_icon",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Optional icon shown above the card title",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_flp_why_cards"
+                                },
+                                {
+                                    "key": "field_flp_why_card_title",
+                                    "label": "Card Title",
+                                    "name": "flp_why_card_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Feature Title",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_why_cards"
+                                },
+                                {
+                                    "key": "field_flp_why_card_body",
+                                    "label": "Card Body",
+                                    "name": "flp_why_card_body",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "default_value": "Describe this feature or benefit in one to two sentences.",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_why_cards"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_flp_why_coverage_note",
+                            "label": "Coverage Note",
+                            "name": "flp_why_coverage_note",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "Optional note shown below the cards with a shield icon",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "default_value": "<p>Your insurance benefits may cover the full cost of care — including copays, deductibles, and coinsurance. <strong>No out-of-pocket costs.<\/strong><\/p>",
+                            "tabs": "all",
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_conditions",
+                    "name": "conditions",
+                    "label": "Conditions \/ Treatment Tags",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_conditions_bg_image",
+                            "label": "Background Image",
+                            "name": "flp_conditions_bg_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_flp_conditions_headline",
+                            "label": "Headline",
+                            "name": "flp_conditions_headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We Treat",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_conditions_intro",
+                            "label": "Intro Text",
+                            "name": "flp_conditions_intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "Beyond standard depression, we offer treatments for a wide range of conditions, available in-person and online across all of California.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_conditions_tags",
+                            "label": "Condition Tags",
+                            "name": "flp_conditions_tags",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Tag",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_conditions_tag_label",
+                                    "label": "Label",
+                                    "name": "flp_conditions_tag_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Condition Name",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_conditions_tags"
+                                },
+                                {
+                                    "key": "field_flp_conditions_tag_url",
+                                    "label": "URL",
+                                    "name": "flp_conditions_tag_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "Optional — leave blank to render as plain text",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_conditions_tags"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_flp_conditions_online_text",
+                            "label": "Online Availability Text",
+                            "name": "flp_conditions_online_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Example: Online: Available anywhere in California",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Online: Available anywhere in California",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_conditions_image",
+                            "label": "Side Image",
+                            "name": "flp_conditions_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Optional — when provided, section switches to a two-column layout",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_challenges",
+                    "name": "challenges",
+                    "label": "Challenge Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_challenges_title",
+                            "label": "Section Title",
+                            "name": "flp_challenges_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Supports basic HTML like <br>",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Unique Mental Health Challenges We Help With",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_challenges_intro",
+                            "label": "Intro Text",
+                            "name": "flp_challenges_intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "You don't have to face these challenges alone. Our team is here to help you through every step of your journey.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_challenges_cards",
+                            "label": "Challenge Cards",
+                            "name": "flp_challenges_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 4,
+                            "layout": "table",
+                            "button_label": "Add Card",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_chall_title",
+                                    "label": "Card Title",
+                                    "name": "flp_chall_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Challenge Title",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_challenges_cards"
+                                },
+                                {
+                                    "key": "field_flp_chall_body",
+                                    "label": "Card Body",
+                                    "name": "flp_chall_body",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "default_value": "Describe this challenge and how it impacts mental health and daily life.",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_challenges_cards"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_flp_challenges_bottom_image",
+                            "label": "Bottom Image",
+                            "name": "flp_challenges_bottom_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_flp_challenges_note",
+                            "label": "Bottom Note Text",
+                            "name": "flp_challenges_note",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "default_value": "Mental health challenges are not a sign of weakness, but stigma can still make it hard to seek help. Reaching out is a proactive step toward improving your quality of life, maintaining your ability to work, and providing for your family.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_treatments",
+                    "name": "treatments",
+                    "label": "Treatment Service Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_treatments_eyebrow",
+                            "label": "Eyebrow Text",
+                            "name": "flp_treatments_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small label above the heading. Example: What We Offer",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "What We Offer",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_treatments_heading",
+                            "label": "Heading",
+                            "name": "flp_treatments_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Our Comprehensive Offerings",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_treatments_intro",
+                            "label": "Intro Text",
+                            "name": "flp_treatments_intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Optional paragraph shown below the heading",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "We provide a full spectrum of mental health services, from specialized treatments to traditional talk therapy.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_treatments_cards",
+                            "label": "Treatment Cards",
+                            "name": "flp_treatments_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Treatment Card",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_treat_image",
+                                    "label": "Card Image",
+                                    "name": "flp_treat_image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                },
+                                {
+                                    "key": "field_flp_treat_title",
+                                    "label": "Card Title",
+                                    "name": "flp_treat_title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Treatment Name",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                },
+                                {
+                                    "key": "field_flp_treat_desc",
+                                    "label": "Card Description",
+                                    "name": "flp_treat_desc",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "default_value": "Describe this treatment, what it involves, and how it helps patients achieve better mental health outcomes.",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                },
+                                {
+                                    "key": "field_flp_treat_sub_list",
+                                    "label": "Sub-List",
+                                    "name": "flp_treat_sub_list",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "Optional bulleted list shown below the description (useful for treatment options like TMS variants)",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "delay": 0,
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                },
+                                {
+                                    "key": "field_flp_treat_link_label",
+                                    "label": "Link Label",
+                                    "name": "flp_treat_link_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Learn More",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                },
+                                {
+                                    "key": "field_flp_treat_link_url",
+                                    "label": "Link URL",
+                                    "name": "flp_treat_link_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_treatments_cards"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_flp_treatments_cta_label",
+                            "label": "CTA Button Label",
+                            "name": "flp_treatments_cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Get Started Today",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_treatments_cta_url",
+                            "label": "CTA Button URL",
+                            "name": "flp_treatments_cta_url",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/pacificmindhealth.com\/new-patient\/?hsLang=en",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_testimonials",
+                    "name": "testimonials",
+                    "label": "Testimonials \/ Reviews",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_testimonials_title",
+                            "label": "Section Title",
+                            "name": "flp_testimonials_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "What Our Patients Say",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_testimonials_shortcode",
+                            "label": "Reviews Shortcode",
+                            "name": "flp_testimonials_shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Paste the shortcode for your reviews widget",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "[trustindex no-registration=google]",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_locations",
+                    "name": "locations",
+                    "label": "Locations",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_locations_title",
+                            "label": "Section Title",
+                            "name": "flp_locations_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Our Locations",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_locations_intro",
+                            "label": "Intro Text",
+                            "name": "flp_locations_intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "Care close to where you live and work, in person at one of our California clinics, or online from anywhere in the state.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_flp_locations_cards",
+                            "label": "Location Cards",
+                            "name": "flp_locations_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Location",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_loc_name",
+                                    "label": "Location Name",
+                                    "name": "flp_loc_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "City Name",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                },
+                                {
+                                    "key": "field_flp_loc_map_url",
+                                    "label": "Google Maps Embed URL",
+                                    "name": "flp_loc_map_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "Paste the Google Maps embed URL (from the Share > Embed a map dialog)",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                },
+                                {
+                                    "key": "field_flp_loc_address",
+                                    "label": "Address",
+                                    "name": "flp_loc_address",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Use line breaks for Street \/ Suite \/ City, State ZIP",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "default_value": "Street Address\nSuite #\nCity, CA ZIP",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                },
+                                {
+                                    "key": "field_flp_loc_hrs_weekday",
+                                    "label": "Mon–Fri Hours",
+                                    "name": "flp_loc_hrs_weekday",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "8:00 AM – 6:00 PM",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                },
+                                {
+                                    "key": "field_flp_loc_hrs_saturday",
+                                    "label": "Saturday Hours",
+                                    "name": "flp_loc_hrs_saturday",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "By appointment",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                },
+                                {
+                                    "key": "field_flp_loc_hrs_sunday",
+                                    "label": "Sunday Hours",
+                                    "name": "flp_loc_hrs_sunday",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Closed",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_locations_cards"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_cta_banner",
+                    "name": "cta_banner",
+                    "label": "CTA Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_cta_headline",
+                            "label": "Headline",
+                            "name": "flp_cta_headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Take the Next Step Toward Better Mental Health",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_flp_cta_subtext",
+                            "label": "Subtext",
+                            "name": "flp_cta_subtext",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "default_value": "<p>Join the thousands of Californians who have found relief through our technology-forward, compassionate approach to mental health care.<\/p>",
+                            "tabs": "all",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_flp_cta_buttons",
+                            "label": "Buttons",
+                            "name": "flp_cta_buttons",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": 3,
+                            "layout": "table",
+                            "button_label": "Add Button",
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_flp_cta_btn_label",
+                                    "label": "Label",
+                                    "name": "flp_cta_btn_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Schedule Now",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_flp_cta_buttons"
+                                },
+                                {
+                                    "key": "field_flp_cta_btn_url",
+                                    "label": "URL",
+                                    "name": "flp_cta_btn_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "https:\/\/pacificmindhealth.com\/new-patient\/?hsLang=en",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_flp_cta_buttons"
+                                },
+                                {
+                                    "key": "field_flp_cta_btn_style",
+                                    "label": "Style",
+                                    "name": "flp_cta_btn_style",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White",
+                                        "outline-white": "Outline White",
+                                        "primary": "Primary (Teal)"
+                                    },
+                                    "default_value": "white",
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "multiple": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "return_format": "value",
+                                    "create_options": 0,
+                                    "save_options": 0,
+                                    "parent_repeater": "field_flp_cta_buttons"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_flp_global_module",
+                    "name": "global_module",
+                    "label": "Global Module",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_flp_global_module_select",
+                            "label": "Select Module",
+                            "name": "flp_global_module_select",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Choose which global module to display here. Content is managed under Global Modules in the admin menu.",
+                            "required": 1,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "featured_in": "Featured In"
+                            },
+                            "default_value": false,
+                            "allow_null": 1,
+                            "ui": 1,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-flexible-landing-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777579553
+}

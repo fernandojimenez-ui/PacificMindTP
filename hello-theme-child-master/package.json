@@ -1,0 +1,16 @@
+{
+  "name": "hello-theme-child-master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./src/tailwind.css -o ./css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4"
+  }
+}

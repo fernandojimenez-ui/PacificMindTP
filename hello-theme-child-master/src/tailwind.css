@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@source "../**/*.php";
+@source "../**/*.js";
+
+@theme {
+    --color-pmh-teal:  #3395ac;
+    --color-pmh-dark:  #1a4a5a;
+    --color-pmh-mid:   #52bfcf;
+    --color-pmh-light: #83d0db;
+    --color-pmh-bg:    #f2f6f8;
+    --color-pmh-warm:  #f6ece0;
+}
