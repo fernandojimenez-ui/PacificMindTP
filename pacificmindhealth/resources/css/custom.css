@@ -1,3 +1,73 @@
+/* ── Scroll animations ── */
+.pmh-animate {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.pmh-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pmh-animate-child {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pmh-animate-child.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .pmh-animate,
+    .pmh-animate-child {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ── Fixed header offset ── */
+#content {
+    padding-top: 80px;
+}
+
+/* On the front page the hero video sits under the transparent header */
+.home #content {
+    padding-top: 0;
+}
+
+/* ── Header scroll states ── */
+#site-header {
+    background: transparent;
+    box-shadow: none;
+}
+
+#site-header.header-scrolled {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Nav link color: white on front page before scrolling */
+.home #site-header:not(.header-scrolled) .pmh-nav > li > a {
+    color: #fff;
+}
+
+.home #site-header:not(.header-scrolled) .pmh-nav > li > a:hover,
+.home #site-header:not(.header-scrolled) .pmh-nav > li.current-menu-item > a,
+.home #site-header:not(.header-scrolled) .pmh-nav > li.current-menu-ancestor > a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Hamburger icon: white on front page before scrolling */
+.home #site-header:not(.header-scrolled) #primary-menu-toggle {
+    color: #fff;
+}
+
 /* ── Header logo ── */
 #site-header .site-logo img,
 #site-header a > img {
@@ -6,6 +76,13 @@
     max-width: 180px !important;
     object-fit: contain !important;
 }
+
+/* Logo swap: dark by default, white when header is transparent */
+#site-header .logo-white { display: none; }
+#site-header .logo-dark  { display: block; }
+
+.home #site-header:not(.header-scrolled) .logo-white { display: block; }
+.home #site-header:not(.header-scrolled) .logo-dark  { display: none; }
 
 /* ── Primary navigation ── */
 .pmh-nav > li {
@@ -172,4 +249,55 @@
   :where(li > :last-child) {
     margin-bottom: 0 !important;
   }
+}
+
+/* ── FAQ Accordion ── */
+a.faq-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    margin-top: 0.5rem;
+    background-color: #f2f6f8;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a4a5a;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background 0.15s, color 0.15s;
+}
+
+a.faq-trigger::after {
+    content: '+';
+    font-size: 1.25rem;
+    font-weight: 400;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    transition: transform 0.2s;
+}
+
+a.faq-trigger[aria-expanded="true"] {
+    background-color: #52BFCF;
+    color: #fff;
+}
+
+a.faq-trigger[aria-expanded="true"]::after {
+    content: '−';
+}
+
+.faq-answer {
+    display: none;
+    padding: 1rem 1.25rem 1.25rem;
+    border: 1px solid #e5eef2;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.faq-answer.faq-open {
+    display: block;
 }

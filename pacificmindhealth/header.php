@@ -20,12 +20,14 @@
 <div id="page" class="min-h-screen flex flex-col">
     <?php do_action('tailpress_header'); ?>
 
-    <header id="site-header" class="bg-white sticky top-0 z-50" style="box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="transition: background 0.3s ease, box-shadow 0.3s ease;">
         <div class="container mx-auto flex items-center justify-between" style="height: 80px;">
 
             <!-- Logo -->
             <a href="<?php echo esc_url(home_url('/')); ?>" class="flex-shrink-0 site-logo">
-                <img src="<?php echo esc_url(content_url('/uploads/pmh-logo-web_3.png')); ?>"
+                <img class="logo-dark" src="<?php echo esc_url(content_url('/uploads/pmh-logo-web_3.png')); ?>"
+                     alt="<?php bloginfo('name'); ?>">
+                <img class="logo-white" src="/wp-content/uploads/pacific-mind-logo-white.png"
                      alt="<?php bloginfo('name'); ?>">
             </a>
 

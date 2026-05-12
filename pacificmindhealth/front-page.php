@@ -25,23 +25,22 @@ get_header();
             Psychiatry and TMS Therapy in Los Angeles, Orange County, and Long Beach, California
         </h1>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="/new-patient/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #3395ac;">Get Started</a>
+            <a href="/new-patient/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #52BFCF;">Get Started</a>
             <a href="/treatments/transcranial-magnetic-stimulation/" class="inline-block text-white font-semibold px-8 py-3 rounded-full border-2 border-white transition hover:bg-white" style="--hover-color: #1a4a5a;">TMS Therapy</a>
             <a href="/treatments/spravato-therapy/" class="inline-block text-white font-semibold px-8 py-3 rounded-full border-2 border-white transition">Spravato</a>
-            <a href="tel:+13104253881" class="inline-block text-white font-semibold px-8 py-3 rounded-full border-2 border-white transition">Call Today</a>
         </div>
     </div>
 </section>
 
 <!-- ===================== TREATMENTS INTRO ===================== -->
 <section class="py-20 bg-white">
-    <div class="container mx-auto text-center" style="max-width: 720px;">
+    <div class="container mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-3" style="color: #1a4a5a;">Your Mental Health Journey Is Unique.</h2>
         <h3 class="text-2xl font-medium mb-8" style="color: #3395ac;">Your Treatment Should Be Too.</h3>
-        <p class="text-lg mb-8" style="color: #4b5563;">
+        <p class="text-lg mb-8 mx-auto" style="color: #4b5563; max-width: 760px;">
             At Pacific Mind Health, we believe everyone should have access to compassionate and effective care. We offer modern and traditional evidence-based mental health treatment that is tailored to meet your needs.
         </p>
-        <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10 text-left max-w-lg mx-auto">
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10 text-left max-w-2xl mx-auto">
             <?php
             $treatments = ['Transcranial Magnetic Stimulation (TMS)', 'Spravato® (esketamine)', 'ADHD Treatment', 'Psychiatry', 'Therapy', 'Genetic Testing'];
             foreach ($treatments as $t) : ?>
@@ -51,7 +50,7 @@ get_header();
                 </li>
             <?php endforeach; ?>
         </ul>
-        <a href="/treatments/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #3395ac;">Learn More</a>
+        <a href="/treatments/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #52BFCF;">Learn More</a>
     </div>
 </section>
 
@@ -122,7 +121,7 @@ get_header();
                 <p class="mb-4" style="color: #4b5563;">At Pacific Mind Health, our goal is to provide quality, science-based mental health care. We want all of our patients to live happier, more fulfilling lives.</p>
                 <p class="mb-4" style="color: #4b5563;">Our experienced team of psychiatrists, psychiatric nurse practitioners, physician assistants, and therapists work together to customize a treatment plan just for you.</p>
                 <p class="mb-8" style="color: #4b5563;">We know suffering from a mental health disorder can feel frustrating, confusing, and even scary. You are not alone. Pacific Mind Health is here to guide you on your mental health journey.</p>
-                <a href="/conditions/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #3395ac;">View Conditions We Treat</a>
+                <a href="/conditions/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #52BFCF;">View Conditions We Treat</a>
             </div>
             <div class="mt-10 md:mt-0">
                 <img src="<?php echo esc_url(content_url('/uploads/1G1A7642-scaled.jpg')); ?>"
@@ -146,7 +145,7 @@ get_header();
                 <h2 class="text-3xl font-bold mb-6" style="color: #1a4a5a;">What To Expect</h2>
                 <p class="mb-4" style="color: #4b5563;">Pacific Mind Health is committed to creating an intake process that is smooth and efficient. We know filling out paperwork can be time-consuming, but it's the quickest way to get you care. Our staff is trained to assist with any insurance and referral requirements.</p>
                 <p class="mb-8" style="color: #4b5563;">Once complete, your Pacific Mind Health clinician will conduct a comprehensive exam that considers you as a whole person. They will take the time to explain our diagnosis and answer any questions you may have. Together, you and your clinician will create a treatment plan that works for you.</p>
-                <a href="/about/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #3395ac;">About Us</a>
+                <a href="/about/" class="inline-block text-white font-semibold px-8 py-3 rounded-full transition" style="background-color: #52BFCF;">About Us</a>
             </div>
         </div>
     </div>
@@ -192,8 +191,14 @@ get_header();
 </section>
 
 <!-- ===================== INSURANCE ===================== -->
-<section class="py-16 text-white text-center" style="background-color: #1a4a5a;">
-    <div class="container mx-auto">
+<section class="py-24 text-white text-center relative" style="
+    background-image: url('/wp-content/uploads/sandy-sea-bottom-underwater-background-underwater-blue-ocean-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+">
+    <div class="absolute inset-0" style="background: rgba(26,74,90,0.65);"></div>
+    <div class="container mx-auto relative z-10">
         <h3 class="text-2xl md:text-3xl font-bold">We're In-Network with Every Major Insurance</h3>
     </div>
 </section>
