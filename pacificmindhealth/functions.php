@@ -88,8 +88,9 @@ function create_treatment_cpt() {
         'menu_position'       => 5,
         'capability_type'     => 'post',
         'show_in_rest'        => true,
+        'rewrite'             => array( 'slug' => 'what-we-treat', 'with_front' => false ),
     );
 
-    register_post_type( 'treatments', $args );
+    register_post_type( 'what-we-treat', $args );
 }
 add_action( 'init', 'create_treatment_cpt', 0 );

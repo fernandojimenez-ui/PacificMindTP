@@ -186,6 +186,7 @@
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     margin-top: --spacing(12);
+    color: #3395ac;
   }
 
   :where(h3) {
@@ -300,4 +301,14 @@ a.faq-trigger[aria-expanded="true"]::after {
 
 .faq-answer.faq-open {
     display: block;
+}
+
+/* ── What We Treat — hero overlay (gradient can't be inlined cleanly) ── */
+.wt-hero-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(11, 35, 55, 0.90) 0%,
+        rgba(26, 74, 90, 0.50) 55%,
+        rgba(11, 35, 55, 0.20) 100%
+    );
 }

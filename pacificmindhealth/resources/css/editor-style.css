@@ -12,6 +12,60 @@ h1 {
     font-family: var(--font-sans);
 }
 
+/* Mirror front-end styles inside the TinyMCE iframe body */
+body {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    color: var(--color-zinc-950);
+}
+
+body a {
+    color: #3395ac;
+    text-decoration: underline;
+}
+
+body a:hover {
+    color: #1a4a5a;
+}
+
+body h2 {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+    color: #3395ac;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+body h3 {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+    color: #1a4a5a;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+body p {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+body ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+body ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+}
+
+body strong {
+    font-weight: var(--font-weight-semibold);
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

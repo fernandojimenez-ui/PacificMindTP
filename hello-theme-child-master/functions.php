@@ -33,6 +33,15 @@ function hello_elementor_child_enqueue_scripts() {
 			'1.0.0'
 		);
 	}
+
+	if ( is_singular( 'treatments' ) ) {
+		wp_enqueue_style(
+			'pmh-single-treatments',
+			get_stylesheet_directory_uri() . '/css/single-treatments.css',
+			[ 'hello-elementor-child-style' ],
+			'1.0.0'
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
 
