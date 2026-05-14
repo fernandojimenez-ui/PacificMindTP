@@ -94,3 +94,8 @@ function create_treatment_cpt() {
     register_post_type( 'what-we-treat', $args );
 }
 add_action( 'init', 'create_treatment_cpt', 0 );
+
+// Gutenberg only for the default post type; classic editor everywhere else.
+add_filter( 'use_block_editor_for_post_type', function ( $use_block_editor, $post_type ) {
+	return $post_type === 'post' ? $use_block_editor : false;
+}, 10, 2 );
